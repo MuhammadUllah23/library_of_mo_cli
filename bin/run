@@ -3,8 +3,6 @@
 require_relative '../lib/environment.rb'
  
 
-#puts ENV["API_KEY"]
-#puts ENV["APP_ID"]
-#CLI.new.start
 
-API.get_data
+CLI.new.start
+#API.get_data

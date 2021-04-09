@@ -1,5 +1,9 @@
 class CLI
     def start
-        API.get_data
+        puts "Welcome to Mo's Library."
+    end
+
+    def user_input
+        gets.strip
     end
 end
