@@ -16,6 +16,13 @@ class CLI
     end
 
     def menu
-        
+        input - user_input
+        if input == "yes"
+            category_list
+        elsif input == "exit"
+            leaving_library
+        else
+            invalid
+        end
     end
 end
