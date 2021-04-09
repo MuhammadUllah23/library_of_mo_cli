@@ -31,4 +31,8 @@ class CLI
     def invalid
         puts "Please enter a valid entry."
     end
+
+    def leaving_library
+        puts "Thank you for coming to Mo's Library. Remember to never stop reading."
+    end
 end
