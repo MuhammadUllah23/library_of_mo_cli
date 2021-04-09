@@ -24,6 +24,11 @@ class CLI
             leaving_library
         else
             invalid
+            menu
         end
+    end
+
+    def invalid
+        puts "Please enter a valid entry."
     end
 end
