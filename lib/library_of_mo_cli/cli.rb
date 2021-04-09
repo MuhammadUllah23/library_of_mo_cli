@@ -11,12 +11,13 @@ class CLI
 
     def greeting(name)
         puts "Welcome to Mo's Library #{name}! You'll find books of all categories ranging from fiction to non-fiction, from business books and how-to's to magazines and manga."
-        puts "Would you like to see the list of categories?"
+        puts "Type in 'yes' if you would you like to see the list of categories?"
+        puts "If you'd like to leave the library at anytime, then please enter 'exit'"
         menu
     end
 
     def menu
-        input - user_input
+        input = user_input
         if input == "yes"
             category_list
         elsif input == "exit"
