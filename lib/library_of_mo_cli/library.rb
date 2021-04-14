@@ -10,7 +10,7 @@ class Library
     end
 
     def save
-        @@all << save
+        @@all << self
     end
 
     def self.all

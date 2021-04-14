@@ -1,6 +1,7 @@
 class CLI
     def start
         puts "Please enter your name:"
+        API.get_data
         name = user_input
         greeting(name)
     end
@@ -35,4 +36,6 @@ class CLI
     def leaving_library
         puts "Thank you for coming to Mo's Library. Remember to never stop reading."
     end
+
+    
 end
