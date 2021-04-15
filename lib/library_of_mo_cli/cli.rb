@@ -43,10 +43,11 @@ class CLI
         Library.all.each.with_index do |library, index|
             puts "#{index+1}. #{library.display_name}"
         end
-        select_book
+        select_category
     end
 
-    def select_book
+    def select_category
+        category = user_input
         
     end
 
