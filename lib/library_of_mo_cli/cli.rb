@@ -38,11 +38,14 @@ class CLI
     end
 
     def category_list
-        array = ["cat1", "cat2", "cat3", "cat4"]
-        array.each.with_index do |cat, index|
-            puts "#{index+1}. #{cat}"
+        
+        Library.all.each.with_index do |cat, index|
+            puts "#{index+1}. #{cat.name}"
         end
+        
     end
+
+    
 
     
 end
