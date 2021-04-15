@@ -39,8 +39,8 @@ class CLI
 
     def category_list
         array = ["cat1", "cat2", "cat3", "cat4"]
-        array.each.with_index(1) do |cat, index|
-            puts "#{index}. #{cat}"
+        array.each.with_index do |cat, index|
+            puts "#{index+1}. #{cat}"
         end
     end
 
