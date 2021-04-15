@@ -37,5 +37,12 @@ class CLI
         puts "Thank you for coming to Mo's Library. Remember to never stop reading."
     end
 
+    def category_list
+        array = ["cat1", "cat2", "cat3", "cat4"]
+        array.each.with_index(1) do |cat, index|
+            puts "#{index}. #{cat}"
+        end
+    end
+
     
 end
