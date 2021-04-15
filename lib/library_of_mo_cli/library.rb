@@ -17,7 +17,11 @@ class Library
         @@all
     end
 
-    def self.find_by_category
+    def self.find_by_category(category_name)
+
+        self.all.detect do |category|
+            category.name == category_name
+        end
         
     end
 end
