@@ -2,7 +2,7 @@ class CLI
     def start
         puts "Please enter your name:"
         API.get_data
-       # binding.pry
+        binding.pry
         name = user_input
         greeting(name)
     end
@@ -58,6 +58,8 @@ class CLI
 
     def books_list(cat_name)
 
+        
+        
     end
 
     
