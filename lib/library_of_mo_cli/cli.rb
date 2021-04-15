@@ -56,8 +56,8 @@ class CLI
         
     end
 
-    def books_list
-        
+    def books_list(cat_name)
+
     end
 
     
