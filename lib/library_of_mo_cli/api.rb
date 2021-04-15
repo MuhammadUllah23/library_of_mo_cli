@@ -4,11 +4,10 @@ class API
         category_array = JSON.parse(response)["results"]["lists"]
         
         category_array.each do |cats|
+            # binding.pry
             Library.new(cats)
         end
         
-       # binding.pry
+      
     end
 end
-#
-#https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?api-key=

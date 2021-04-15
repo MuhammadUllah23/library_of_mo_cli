@@ -2,6 +2,7 @@ class CLI
     def start
         puts "Please enter your name:"
         API.get_data
+       # binding.pry
         name = user_input
         greeting(name)
     end
@@ -39,8 +40,8 @@ class CLI
 
     def category_list
         
-        Library.all.each.with_index do |cat, index|
-            puts "#{index+1}. #{cat.name}"
+        Library.all.each.with_index do |library, index|
+            puts "#{index+1}. #{library.display_name}"
         end
         
     end

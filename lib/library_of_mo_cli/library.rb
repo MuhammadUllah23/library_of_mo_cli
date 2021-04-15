@@ -4,7 +4,7 @@ class Library
 
     def initialize(library_hash)
         library_hash.each do |key, value|
-            self.send("{key}=", value) if self.respond_to?("{key}=")
+            self.send("#{key}=", value) if self.respond_to?("#{key}=")
         end
         save
     end
