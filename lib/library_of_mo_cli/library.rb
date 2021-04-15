@@ -1,5 +1,5 @@
 class Library 
-    attr_accessor :display_name, :title, :description, :author, :publisher, :rank, :weeks_on_list, :books
+    attr_accessor :display_name, :books
     @@all = []
 
     def initialize(library_hash)

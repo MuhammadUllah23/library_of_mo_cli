@@ -57,10 +57,11 @@ class CLI
     end
    
     def books_list(cat_name)
-       cat_name.books.each do |book|
-        puts "#{book["title"]}"
+       cat_name.books.each.with_index do |book, index|
+        puts "#{index+1}. #{book["title"]}"
        end
-        # binding.pry
+       select_book
+       #  binding.pry
     end
     
 
