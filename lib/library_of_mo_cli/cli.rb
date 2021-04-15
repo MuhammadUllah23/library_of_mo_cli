@@ -50,8 +50,13 @@ class CLI
         puts "Please enter the category you would like to search through:"
         category = user_input
         if Library.find_by_category(category)
-            cat_name = Library.find_by_category
+            cat_name = Library.find_by_category(category)
         end
+        books_list(cat_name)
+        
+    end
+
+    def books_list
         
     end
 
