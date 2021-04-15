@@ -2,7 +2,7 @@ class CLI
     def start
         puts "Please enter your name:"
         API.get_data
-        binding.pry
+      #  binding.pry
         name = user_input
         greeting(name)
     end
@@ -55,12 +55,14 @@ class CLI
         books_list(cat_name)
         
     end
-
+   
     def books_list(cat_name)
-
-        
-        
+       cat_name.books.each do |book|
+        puts "#{book["title"]}"
+       end
+        # binding.pry
     end
+    
 
     
 
