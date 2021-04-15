@@ -46,6 +46,10 @@ class CLI
         select_book
     end
 
+    def select_book
+        
+    end
+
     
 
     
