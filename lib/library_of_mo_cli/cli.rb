@@ -59,10 +59,11 @@ class CLI
     def books_list(cat_name)
        cat_name.books.each.with_index do |book, index|
         puts "#{book["title"]}"
+        puts "By #{book["author"]}"
         puts "#{book["description"]}"
        end
        
-        # binding.pry
+         #binding.pry
     end
     
    
