@@ -60,6 +60,7 @@ class CLI
        cat_name.books.each.with_index do |book, index|
         puts "#{book["title"]}"
         puts "By #{book["author"]}"
+        puts "Published by #{book["publisher"]}"
         puts "#{book["description"]}"
        end
        
