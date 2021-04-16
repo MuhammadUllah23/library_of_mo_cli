@@ -41,7 +41,9 @@ class CLI
     def category_list
         
         Library.all.each.with_index do |library, index|
+           
             puts "#{index+1}. #{library.display_name}"
+            puts ""
         end
         select_category
     end
@@ -89,7 +91,7 @@ class CLI
         puts ""
        end
      #  binding.pry
-     puts "Please enter yes to see a list of categories or exit to leave"
+     puts "Please enter 'yes' to see a list of categories or 'exit' to leave"
      menu
     end
     
