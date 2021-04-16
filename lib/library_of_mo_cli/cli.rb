@@ -76,9 +76,7 @@ class CLI
                 puts "#{book_title}"
             end
         end
-        #title_caps.each do |title|
-           # puts "#{title}"
-       # end
+        
         
         puts "By #{book["author"]}"
         puts "Published by #{book["publisher"]}"
@@ -93,7 +91,6 @@ class CLI
     
    
 
-   # (&:capitalize)
     
 
     
