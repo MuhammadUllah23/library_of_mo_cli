@@ -20,7 +20,7 @@ class Library
     def self.find_by_category(category_name)
 
         self.all.detect do |category|
-            category.display_name == category_name
+            category.display_name.downcase == category_name.downcase
         end
         
     end

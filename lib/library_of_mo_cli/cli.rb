@@ -20,9 +20,9 @@ class CLI
 
     def menu
         input = user_input
-        if input == "yes"
+        if input.downcase == "yes"
             category_list
-        elsif input == "exit"
+        elsif input.downcase == "exit"
             leaving_library
         else
             invalid
@@ -51,8 +51,14 @@ class CLI
         category = user_input
         if Library.find_by_category(category)
             cat_name = Library.find_by_category(category)
+            books_list(cat_name)   
+        elsif category.downcase == "exit"
+            leaving_library
+        else 
+            invalid
+            select_category
         end
-        books_list(cat_name)   
+        
     end
    
     def books_list(cat_name)
@@ -81,6 +87,8 @@ class CLI
         puts "Weeks On List: #{book["weeks_on_list"]}"
        end
      #  binding.pry
+     puts "Please enter yes to see a list of categories or exit to leave"
+     menu
     end
     
    
