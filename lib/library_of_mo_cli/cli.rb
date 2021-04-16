@@ -12,9 +12,11 @@ class CLI
     end
 
     def greeting(name)
+        puts ""
         puts "Welcome to Mo's Library #{name}! You'll find books of all categories ranging from fiction to non-fiction, from business books and how-to's to magazines and manga."
-        puts "Type in 'yes' if you would you like to see the list of categories?"
+        puts "If you would you like to see the list of categories, then please enter 'yes'"
         puts "If you'd like to leave the library at anytime, then please enter 'exit'"
+        puts ""
         menu
     end
 
