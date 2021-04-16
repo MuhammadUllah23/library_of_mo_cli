@@ -61,11 +61,18 @@ class CLI
         array_lowercase << book["title"].downcase
         title_caps = []
         array_lowercase.each do |title|
-            title_caps << title.split.map(&:capitalize).join(' ')
+            title_caps << title.split.map {|string| string.capitalize}
+            f_title = []
+            title_caps.each do |sc|
+                f_title << sc.join(" ")
+            end
+            f_title.each do |book_title|
+                puts "#{book_title}"
+            end
         end
-        title_caps.each do |title|
-            puts "#{title}"
-        end
+        #title_caps.each do |title|
+           # puts "#{title}"
+       # end
         puts "#{book["title"]}"
         puts "By #{book["author"]}"
         puts "Published by #{book["publisher"]}"
@@ -78,7 +85,7 @@ class CLI
     
    
 
-    
+   # (&:capitalize)
     
 
     
