@@ -61,7 +61,7 @@ class CLI
         array_lowercase << book["title"].downcase
         title_caps = []
         array_lowercase.each do |title|
-            title_caps << title.capitalize
+            title_caps << title.split.map(&:capitalize).join(' ')
         end
         title_caps.each do |title|
             puts "#{title}"
@@ -73,7 +73,7 @@ class CLI
         puts "Highest reached on New York Time Best Sellers: #{book["rank"]}"
         puts "Weeks On List: #{book["weeks_on_list"]}"
        end
-       #binding.pry
+     #  binding.pry
     end
     
    
