@@ -58,10 +58,18 @@ class CLI
    
     def books_list(cat_name)
        cat_name.books.each.with_index do |book, index|
-        puts "#{index+1}. #{book["title"]}"
+        puts "#{book["title"]}"
+        puts "#{book["description"]}"
        end
-       select_book
-       #  binding.pry
+       
+        # binding.pry
+    end
+    
+   
+
+    def select_book(title)
+        puts "Please enter the book for more details"
+        book = user_input
     end
     
 
