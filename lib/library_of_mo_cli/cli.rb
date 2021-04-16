@@ -62,6 +62,8 @@ class CLI
         puts "By #{book["author"]}"
         puts "Published by #{book["publisher"]}"
         puts "#{book["description"]}"
+        puts "Highest reached on New York Time Best Sellers: #{book["rank"]}"
+        
        end
        
          #binding.pry
