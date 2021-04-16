@@ -63,7 +63,7 @@ class CLI
         puts "Published by #{book["publisher"]}"
         puts "#{book["description"]}"
         puts "Highest reached on New York Time Best Sellers: #{book["rank"]}"
-        
+        puts "Weeks On List: #{book["weeks_on_list"]}"
        end
        
          #binding.pry
