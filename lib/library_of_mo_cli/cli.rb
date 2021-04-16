@@ -52,12 +52,20 @@ class CLI
         if Library.find_by_category(category)
             cat_name = Library.find_by_category(category)
         end
-        books_list(cat_name)
-        
+        books_list(cat_name)   
     end
    
     def books_list(cat_name)
        cat_name.books.each.with_index do |book, index|
+        array_lowercase=[]
+        array_lowercase << book["title"].downcase
+        title_caps = []
+        array_lowercase.each do |title|
+            title_caps << title.capitalize
+        end
+        title_caps.each do |title|
+            puts "#{title}"
+        end
         puts "#{book["title"]}"
         puts "By #{book["author"]}"
         puts "Published by #{book["publisher"]}"
@@ -65,8 +73,7 @@ class CLI
         puts "Highest reached on New York Time Best Sellers: #{book["rank"]}"
         puts "Weeks On List: #{book["weeks_on_list"]}"
        end
-       
-         #binding.pry
+       #binding.pry
     end
     
    
