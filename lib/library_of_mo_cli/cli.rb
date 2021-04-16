@@ -67,10 +67,7 @@ class CLI
     
    
 
-    def select_book(title)
-        puts "Please enter the book for more details"
-        book = user_input
-    end
+    
     
 
     
