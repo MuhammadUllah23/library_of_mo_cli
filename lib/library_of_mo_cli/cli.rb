@@ -52,8 +52,9 @@ class CLI
         select_category
     end
 
-    def select_category
+    def select_category 
         puts "Please enter the category you would like to search through:"
+         puts ""
         category = user_input
         if Library.find_by_category(category)
             cat_name = Library.find_by_category(category)
