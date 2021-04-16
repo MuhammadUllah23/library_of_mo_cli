@@ -63,6 +63,8 @@ class CLI
    
     def books_list(cat_name)
        cat_name.books.each.with_index do |book, index|
+        puts ""
+        puts "---------------------------------------------------------------------------------------------------------------------------------------"
         array_lowercase=[]
         array_lowercase << book["title"].downcase
         title_caps = []
@@ -83,6 +85,8 @@ class CLI
         puts "#{book["description"]}"
         puts "Highest reached on New York Time Best Sellers: #{book["rank"]}"
         puts "Weeks On List: #{book["weeks_on_list"]}"
+        puts "---------------------------------------------------------------------------------------------------------------------------------------"
+        puts ""
        end
      #  binding.pry
      puts "Please enter yes to see a list of categories or exit to leave"
