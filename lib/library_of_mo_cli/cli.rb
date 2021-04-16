@@ -79,7 +79,7 @@ class CLI
         #title_caps.each do |title|
            # puts "#{title}"
        # end
-        puts "#{book["title"]}"
+        
         puts "By #{book["author"]}"
         puts "Published by #{book["publisher"]}"
         puts "#{book["description"]}"
