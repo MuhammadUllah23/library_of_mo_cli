@@ -100,9 +100,7 @@ class CLI
      menu
     end
     
-   def capitalize_title(book)
-    
-   end
+   
 
     
 
