@@ -72,20 +72,7 @@ class CLI
        cat_name.books.map do |book|
         puts ""
         puts "---------------------------------------------------------------------------------------------------------------------------------------"
-        array_lowercase=[]
-        array_lowercase << book["title"].downcase
-        title_caps = []
-        array_lowercase.map do |title|
-            title_caps << title.split(" ").map {|string| string.capitalize}
-            f_title = []
-            title_caps.map do |sc|
-                f_title << sc.join(" ")
-            end
-            f_title.map do |book_title|
-                puts "#{book_title}"
-            end
-        end
-        
+        capitalize_title(book["title"])
         
         puts "By #{book["author"]}"
         puts "Published by #{book["publisher"]}"
@@ -101,6 +88,19 @@ class CLI
     end
     
     def capitalize_title(book)
+        array_lowercase=[]
+        array_lowercase << book["title"]
+        title_caps = []
+        array_lowercase.map do |title|
+            title_caps << title.split(" ").map {|string| string.capitalize}
+            f_title = []
+            title_caps.map do |sc|
+                f_title << sc.join(" ")
+            end
+            f_title.map do |book_title|
+                puts "#{book_title}"
+            end
+        end
         
     end
    
