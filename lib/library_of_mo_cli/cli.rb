@@ -69,7 +69,7 @@ class CLI
     end
    
     def books_list(cat_name)
-       cat_name.books.each.with_index do |book, index|
+       cat_name.books.map do |book|
         puts ""
         puts "---------------------------------------------------------------------------------------------------------------------------------------"
         array_lowercase=[]
@@ -100,7 +100,9 @@ class CLI
      menu
     end
     
-   
+   def capitalize_title(book)
+    
+   end
 
     
 
