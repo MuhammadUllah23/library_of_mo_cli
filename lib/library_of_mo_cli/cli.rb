@@ -44,7 +44,7 @@ class CLI
 
     def category_list
         
-        Library.all.each.with_index do |library, index|
+        Library.all.map.with_index do |library, index|
            
             puts "#{index+1}. #{library.display_name}"
             puts ""
@@ -75,13 +75,13 @@ class CLI
         array_lowercase=[]
         array_lowercase << book["title"].downcase
         title_caps = []
-        array_lowercase.each do |title|
+        array_lowercase.map do |title|
             title_caps << title.split.map {|string| string.capitalize}
             f_title = []
-            title_caps.each do |sc|
+            title_caps.map do |sc|
                 f_title << sc.join(" ")
             end
-            f_title.each do |book_title|
+            f_title.map do |book_title|
                 puts "#{book_title}"
             end
         end
