@@ -81,7 +81,7 @@ class CLI
         puts "---------------------------------------------------------------------------------------------------------------------------------------"
         puts ""
        end
-      #binding.pry
+     #binding.pry
      puts "Please enter 'yes' to see a list of categories or 'exit' to leave"
      menu
     end
