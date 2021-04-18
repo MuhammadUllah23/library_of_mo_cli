@@ -69,11 +69,10 @@ class CLI
     end
    
     def books_list(cat_name)
-       cat_name.books.map do |book|
+       cat_name.books.each do |book|
         puts ""
         puts "---------------------------------------------------------------------------------------------------------------------------------------"
-        capitalize_title(book["title"])
-        
+        capitalize_title(book["title"])  
         puts "By #{book["author"]}"
         puts "Published by #{book["publisher"]}"
         puts "#{book["description"]}"
@@ -82,28 +81,28 @@ class CLI
         puts "---------------------------------------------------------------------------------------------------------------------------------------"
         puts ""
        end
-     #  binding.pry
+      #binding.pry
      puts "Please enter 'yes' to see a list of categories or 'exit' to leave"
      menu
     end
     
-    def capitalize_title(book)
-        array_lowercase=[]
-        array_lowercase << book["title"]
+   def capitalize_title(title)
+      array_lowercase=[]
+        array_lowercase << title.downcase
         title_caps = []
-        array_lowercase.map do |title|
-            title_caps << title.split(" ").map {|string| string.capitalize}
+        array_lowercase.each do |title|
+            title_caps << title.split.map {|string| string.capitalize}
             f_title = []
-            title_caps.map do |sc|
+           
+            title_caps.each do |sc|
                 f_title << sc.join(" ")
             end
-            f_title.map do |book_title|
+            f_title.each do |book_title|
                 puts "#{book_title}"
             end
+            # binding.pry
         end
-        
-    end
-   
+   end
 
     
 
