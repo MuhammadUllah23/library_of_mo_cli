@@ -1,4 +1,4 @@
-# Library Of Mo Cli
+# Library Of Mo CLI
 
 Welcome to my gem. My gem is a library that contains a list of 18 categories and each category has a list of 5 books that were best sellers and contains information such as the title, the auther, the publisher, the description(if given), the rank it reached, and how many weeks it was on the list. The list pertains to the New York Times Best Sellers overview.
 
