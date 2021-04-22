@@ -3,9 +3,8 @@ class Library
     @@all = []
 
     def initialize(library_hash)
-        library_hash.each do |key, value|
-            self.send("#{key}=", value) if self.respond_to?("#{key}=")
-        end
+        @display_name = library_hash["display_name"]
+        @books = library_hash["books"]
         save
     end
 
