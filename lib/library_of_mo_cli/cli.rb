@@ -90,11 +90,11 @@ class CLI
       array_lowercase=[]
         array_lowercase << title.downcase
         title_caps = []
-        array_lowercase.each do |title|
+        array_lowercase.map do |title|
             title_caps << title.split.map {|string| string.capitalize}
             f_title = []
            
-            title_caps.each do |sc|
+            title_caps.map do |sc|
                 f_title << sc.join(" ")
             end
             f_title.each do |book_title|
