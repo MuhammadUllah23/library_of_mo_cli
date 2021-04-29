@@ -72,7 +72,8 @@ class CLI
        cat_name.books.each do |book|
         puts ""
         puts "---------------------------------------------------------------------------------------------------------------------------------------"
-        capitalize_title(book["title"])  
+        x = Library.capitalize_title(book["title"]) 
+        puts "#{x.join(" ")}"
         puts "By #{book["author"]}"
         puts "Published by #{book["publisher"]}"
         puts "#{book["description"]}"
@@ -86,23 +87,7 @@ class CLI
      menu
     end
     
-   def capitalize_title(title)
-      array_lowercase=[]
-        array_lowercase << title.downcase
-        title_caps = []
-        array_lowercase.map do |title|
-            title_caps << title.split.map {|string| string.capitalize}
-            f_title = []
-           
-            title_caps.map do |sc|
-                f_title << sc.join(" ")
-            end
-            f_title.each do |book_title|
-                puts "#{book_title}"
-            end
-            # binding.pry
-        end
-   end
+  
 
     
 
