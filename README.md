@@ -1,8 +1,6 @@
-# LibraryOfMoCli
+# Library Of Mo CLI
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/library_of_mo_cli`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to my gem. My gem is a library that contains a list of 18 categories and each category has a list of 5 books that were best sellers and contains information such as the title, the auther, the publisher, the description(if given), the rank it reached, and how many weeks it was on the list. The list pertains to the New York Times Best Sellers overview.
 
 ## Installation
 
