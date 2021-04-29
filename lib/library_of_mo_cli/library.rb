@@ -1,24 +1,17 @@
 class Library 
-    attr_accessor :display_name, :books
+    self.attr_accessor(:display_name, :books)
 
-def display_name
-    @display_name
-end
-
-def display_name=(display_name)
-    @display_name = display_name
-end 
 
     @@all = []
 
     def initialize(library_hash)
-        @display_name = library_hash["display_name"]
-        @books = library_hash["books"]
+        self.display_name = library_hash["display_name"]
+        self.books = library_hash["books"]
         save
     end
 
     def save
-        @@all << self
+        self.class.all << self
         #binding.pry
     end
 
@@ -30,7 +23,7 @@ end
     def self.find_by_category(category_name)
         #binding.pry
         self.all.detect do |category|
-            category.display_name.downcase == category_name.downcase
+            category.display_name.downcase == category_name.downcase 
         end
         
     end
@@ -44,8 +37,8 @@ end
             
               
           end
-          #puts "#{x.join(" ")}"
-     # binding.pry
+          
+      #binding.pry
      end
 
 end

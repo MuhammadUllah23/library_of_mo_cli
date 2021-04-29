@@ -56,9 +56,13 @@ class CLI
         puts "Please enter the category you would like to search through:"
          puts ""
         category = user_input
+        #binding.pry
         if Library.find_by_category(category)
             cat_name = Library.find_by_category(category)
             books_list(cat_name)   
+        elsif category.to_i.between?(1, Library.all.length)
+            cat_name = Library.all[category.to_i-1]
+            books_list(cat_name)
         elsif category.downcase == "exit"
             leaving_library
         else 
